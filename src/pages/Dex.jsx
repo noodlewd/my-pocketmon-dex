@@ -13,9 +13,14 @@ const Dex = () => {
     }
   };
 
+  const removePokemon = (pokemonId) => {
+    const updateList = myPokeBall.filter((item) => item.id !== pokemonId);
+    setMyPokeBall(updateList);
+  };
+
   return (
     <div>
-      <Dashboard myPokeBall={myPokeBall} />
+      <Dashboard myPokeBall={myPokeBall} removePokemon={removePokemon} />
       <PokemonList addPokemon={addPokemon} />
     </div>
   );

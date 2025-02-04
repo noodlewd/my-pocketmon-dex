@@ -17,3 +17,23 @@
   border: 1px solid red;
   text-align: center;
 }
+
+.remove-btn {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  background-color: red;
+  border-style: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+  box-sizing: border-box;
+}
+
+.remove-btn:hover {
+  font-size: 13px;
+  transform: scale(0.9);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: darkred;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/dashboard.css";
 
-const Dashboard = ({ myPokeBall }) => {
+const Dashboard = ({ myPokeBall, removePokemon }) => {
   return (
     <div className="dash-box">
       <h2 className="dash-title">나만의 포켓몬</h2>
@@ -11,6 +11,9 @@ const Dashboard = ({ myPokeBall }) => {
             <img src={card.img_url} alt={card.korean_name} />
             <p>{card.korean_name}</p>
             <p>No. {card.id}</p>
+            <button className="remove-btn" onClick={() => removePokemon(card.id)}>
+              삭제
+            </button>
           </p>
         ))}
       </div>
