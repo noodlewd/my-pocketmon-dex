@@ -5,6 +5,7 @@ import PokemonList from "../components/PokemonList";
 const Dex = () => {
   const [myPokeBall, setMyPokeBall] = useState([]);
 
+  // 대쉬보드 포켓몬 추가 로직
   const addPokemon = (pokemon) => {
     if (myPokeBall.length < 6) {
       setMyPokeBall([...myPokeBall, pokemon]);
@@ -13,6 +14,7 @@ const Dex = () => {
     }
   };
 
+  // 대쉬보드 포켓몬 삭제 로직
   const removePokemon = (pokemonId) => {
     const updateList = myPokeBall.filter((item) => item.id !== pokemonId);
     setMyPokeBall(updateList);
