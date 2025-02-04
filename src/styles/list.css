@@ -1,0 +1,15 @@
+.ul-style {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  gap: 150px;
+  border: 1px solid rebeccapurple;
+}
+
+.li-style {
+  margin: 30px 0 30px 0;
+  text-align: center;
+  border: 1px solid rebeccapurple;
+}

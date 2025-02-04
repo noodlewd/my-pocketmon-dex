@@ -1,0 +1,18 @@
+.dash-box {
+  border: 1px solid red;
+}
+
+.dash-title {
+  margin-top: 80px;
+  text-align: center;
+}
+.monster-ball {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 30px 0px 120px;
+  width: calc(80% + 100px);
+}
+
+.ball-image {
+  border: 1px solid red;
+}
