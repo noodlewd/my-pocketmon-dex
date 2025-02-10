@@ -7,7 +7,7 @@ const Home = () => {
     <HomeContainer>
       <LogoImg />
       <StartButton>
-        <Link to="/dex">포켓몬 도감 시작하기</Link>
+        <Link to="/dex">포켓몬 도감 시작하기</Link> {/* dex페이지로 이동 */}
       </StartButton>
     </HomeContainer>
   );

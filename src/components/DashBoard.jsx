@@ -13,9 +13,12 @@ import monsterBallImg from "../assets/imgFile/poketball.png";
 import { PoketmonContext } from "../context/PoketmonProvider";
 
 const Dashboard = () => {
+  // 전역상태 데이터 가져오기(보유 포켓몬 리스트, 삭제 로직)
   const { myPokeBall, removePokemon } = useContext(PoketmonContext);
 
+  // 빈 슬롯 갯수
   const emptySlot = 6 - myPokeBall.length;
+  // 보유한 포켓몬 리스트 + 빈 슬롯에 null값을 채움(6개가 유지되도록)
   const usuallySlot = [...myPokeBall, ...new Array(emptySlot).fill(null)];
 
   return (
@@ -25,6 +28,7 @@ const Dashboard = () => {
         <MonsterBallContainer>
           {usuallySlot.map((card, index) => (
             <BallImg key={index}>
+              {/* 삼항연산자를 이용하여 포켓몬이 있으면 CardList, 없으면 TestImg를 표시 */}
               {card ? (
                 <CardList>
                   <img src={card.img_url} alt={card.korean_name} />

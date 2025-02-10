@@ -9,6 +9,8 @@ const Router = () => {
   return (
     <BrowserRouter>
       <PoketmonProvider>
+        {" "}
+        {/*Provider로 감싸줌(전역에 포켓몬 관련 데이터 관리 가능) */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dex" element={<Dex />} />

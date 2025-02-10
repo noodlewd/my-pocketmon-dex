@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/list.js";
 import { useNavigate } from "react-router-dom";
 import { AddButton, LiStyle } from "../styles/list.js";
+import { PoketmonContext } from "../context/PoketmonProvider.jsx";
 
-const PokemonCard = ({ card, addPokemon }) => {
+const PokemonCard = ({ card }) => {
+  // 페이지 이동 방식
   const navigate = useNavigate();
+  const { addPokemon } = useContext(PoketmonContext);
+
+  // 이미지 클릭 시 detail 페이지로 이동
   const handleImgClick = () => {
     navigate(`/detail?id=${card.id}`);
   };
