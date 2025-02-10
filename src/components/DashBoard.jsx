@@ -1,23 +1,43 @@
 import React from "react";
-import "../styles/dashboard.css";
+import {
+  BallImg,
+  CardList,
+  DashBorder,
+  DashBox,
+  DashTitle,
+  MonsterBallContainer,
+  RemoveButton,
+  TestImg,
+} from "../styles/dashboard";
 
-const Dashboard = ({ myPokeBall, removePokemon }) => {
+const Dashboard = ({ myPokeBall, removePokemon, monsterBallImg }) => {
+  const emptySlot = 6 - myPokeBall.length;
+  const usuallySlot = [...myPokeBall, ...new Array(emptySlot).fill(null)];
+
   return (
-    <div className="dash-box">
-      <h2 className="dash-title">나만의 포켓몬</h2>
-      <div className="monster-ball">
-        {myPokeBall.map((card) => (
-          <p key={card.id} className="ball-image">
-            <img src={card.img_url} alt={card.korean_name} />
-            <p>{card.korean_name}</p>
-            <p>No. {card.id}</p>
-            <button className="remove-btn" onClick={() => removePokemon(card.id)}>
-              삭제
-            </button>
-          </p>
-        ))}
-      </div>
-    </div>
+    <DashBox>
+      <DashBorder>
+        <DashTitle>나만의 포켓몬</DashTitle>
+        <MonsterBallContainer>
+          {usuallySlot.map((card, index) => (
+            <BallImg key={index}>
+              {card ? (
+                <CardList>
+                  <img src={card.img_url} alt={card.korean_name} />
+                  <p>{card.korean_name}</p>
+                  <p>No. {card.id}</p>
+                  <RemoveButton className="remove-btn" onClick={() => removePokemon(card.id)}>
+                    삭제
+                  </RemoveButton>
+                </CardList>
+              ) : (
+                <TestImg src={monsterBallImg} alt="몬스터볼 사진" className="test" />
+              )}
+            </BallImg>
+          ))}
+        </MonsterBallContainer>
+      </DashBorder>
+    </DashBox>
   );
 };
 
