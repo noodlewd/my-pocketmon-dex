@@ -6,13 +6,27 @@ export const PoketmonContext = createContext(null);
 
 // Provider 컴포넌트
 const PoketmonProvider = ({ children }) => {
-  const [myPokeBall, setMyPokeBall] = useState([]);
+  // 초기 데이터 불러오기
+  const [myPokeBall, setMyPokeBall] = useState(() => {
+    const saveData = JSON.parse(localStorage.getItem("myPokeBall"));
+    return saveData || [];
+  });
 
   // 대쉬보드 포켓몬 추가 로직
   const addPokemon = (pokemon) => {
+    // 중복 포켓몬 방지
+    const existPokeBall = myPokeBall.some((exist) => exist.id === pokemon.id);
+    if (existPokeBall) {
+      Swal.fire(`이미 가지고있는 포켓몬 입니다.`);
+      return;
+    }
+
     // 배열의 길이가 6보다 작을 때 즉, 6마리까지만 추가 가능
     if (myPokeBall.length < 6) {
-      setMyPokeBall([...myPokeBall, pokemon]);
+      const updateData = [...myPokeBall, pokemon];
+      setMyPokeBall(updateData);
+      //로컬스토리지 저장
+      localStorage.setItem("myPokeBall", JSON.stringify(updateData));
     } else {
       // alert 창 디자인
       Swal.fire(`포켓몬은 최대 6마리까지만 </br> 추가할 수 있습니다.`);
@@ -21,18 +35,9 @@ const PoketmonProvider = ({ children }) => {
 
   // 대쉬보드 포켓몬 삭제 로직
   const removePokemon = (pokemonId) => {
-    setMyPokeBall((prev) => {
-      // 같은 id값으로 인한 중복 삭제 에러 및 방지
-      let removeDash = false;
-      // 삭제 할 포켓몬 제외 나머지 반환
-      return prev.filter((pokemon) => {
-        if (pokemon.id === pokemonId && !removeDash) {
-          removeDash = true;
-          return false;
-        }
-        return true;
-      });
-    });
+    const updateData = myPokeBall.filter((pokemon) => pokemon.id !== pokemonId);
+    setMyPokeBall(updateData);
+    localStorage.setItem("myPokeBall", JSON.stringify(updateData));
   };
 
   return (

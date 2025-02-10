@@ -29,13 +29,17 @@ export const PokemonDetail = () => {
 
   const handleAutoButton = () => {
     // true 일 경우 삭제구현
-    if (existPokemon) {
-      removePokemon(pokemon.id);
-      Swal.fire(`목록에서 삭제되었습니다`);
+    if (existPokemon === false) {
+      if (myPokeBall.length < 6) {
+        addPokemon(pokemon);
+        Swal.fire(`목록에 추가되었습니다`);
+      } else {
+        Swal.fire(`포켓몬은 최대 6마리까지만 <br/> 추가할 수 있습니다.`);
+      }
       // false 일 경우 추가구현
     } else {
-      addPokemon(pokemon);
-      Swal.fire(`목록에 추가되었습니다`);
+      removePokemon(pokemon.id);
+      Swal.fire(`목록에서 삭제되었습니다`);
     }
   };
   // 뒤로가기 버튼을 클릭 시 이전 dex 페이지로 이동
