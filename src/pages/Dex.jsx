@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "../components/Dashboard";
+import Dashboard from "../components/DashBoard";
 import PokemonList from "../components/PokemonList";
 import { DexContainer } from "../styles/list.js";
 
