@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   BallImg,
   CardList,
@@ -9,8 +9,12 @@ import {
   RemoveButton,
   TestImg,
 } from "../styles/dashboard";
+import monsterBallImg from "../assets/imgFile/poketball.png";
+import { PoketmonContext } from "../context/PoketmonProvider";
 
-const Dashboard = ({ myPokeBall, removePokemon, monsterBallImg }) => {
+const Dashboard = () => {
+  const { myPokeBall, removePokemon } = useContext(PoketmonContext);
+
   const emptySlot = 6 - myPokeBall.length;
   const usuallySlot = [...myPokeBall, ...new Array(emptySlot).fill(null)];
 
