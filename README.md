@@ -14,18 +14,18 @@
 ---
 
 ## <img src="https://img.icons8.com/?size=100&id=45476&format=png&color=000000" width="30">스크린샷
-<img src="./src/assets/imgFile/Home.JPG" width="350" style="border: solid black;"> <img src="./src/assets/imgFile/Dex.JPG" width="350" style="border: solid black;">
-<img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">**Home**<img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; 
+<img src="./src/assets/imgFile/Home.JPG" width="350" style="border: solid black;"> <img src="./src/assets/imgFile/Dex.JPG" width="350" style="border: solid black;"><br/>
+<img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">**Home**<img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; 
 <img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">**Dex**<img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">
 <br/><br/> 
-<img src="./src/assets/imgFile/Dex-add-remove.JPG" width="350" style="border: solid black;"> <img src="./src/assets/imgFile/alert1.JPG" width="350" style="border: solid black;">
+<img src="./src/assets/imgFile/Dex-add-remove.JPG" width="350" style="border: solid black;"> <img src="./src/assets/imgFile/alert1.JPG" width="350" style="border: solid black;"><br/>
 <img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">**Add, Remove**<img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; 
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; 
 <img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">**Alert**<img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">
 <br/><br/> 
-<img src="./src/assets/imgFile/Detail-add.JPG" width="350" style="border: solid black;"> <img src="./src/assets/imgFile/Detail-remove.JPG" width="350" style="border: solid black;">
+<img src="./src/assets/imgFile/Detail-add.JPG" width="350" style="border: solid black;"> <img src="./src/assets/imgFile/Detail-remove.JPG" width="350" style="border: solid black;"><br/> 
 <img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">**Detail-Add**<img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; 
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; 
 <img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">**Detail-Remove**<img src="https://img.icons8.com/?size=100&id=45663&format=png&color=000000" width="20">
 
 
